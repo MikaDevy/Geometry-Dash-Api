@@ -1,21 +1,16 @@
-public enum forms {
-  cube,
-  ship,
-  ball,
-  ufo,
-  wave,
-  robot,
-  spider
-}
+import lib.Color.ColorCode;
+import lib.Debug;
+import lib.Forms;
 
 public class mainClass {
 
-  public static forms;
+  public static Forms forms;
 
   public static void main(String[] args) {
-    if (!forms) {
-      Debug.Log("Hello white");
+    if (forms == null) {
+      Debug.Log(ColorCode.RED,"Error! YOu didn't specify a form type!");
+    } else {
+      Debug.Log("You chose: " + forms.toString());
     }
   }
-
 }
